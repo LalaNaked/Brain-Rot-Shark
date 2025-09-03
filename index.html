@@ -6,16 +6,34 @@
   <title>Brainrot Shark 🦈</title>
   <style>
     body {
-      background: #000;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
       color: #fff;
       text-align: center;
-      font-family: Arial, sans-serif;
-      padding-top: 50px;
+      background: url("brainrotshark.jpg") no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.6); /* keeps text readable */
+      min-height: 100vh;
+      padding-top: 60px;
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin-bottom: 20px;
+      text-shadow: 2px 2px 8px #000;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+      padding: 0 20px;
+      text-shadow: 1px 1px 6px #000;
     }
 
     .play-btn {
@@ -52,17 +70,23 @@
 </head>
 <body>
 
-  <h1>🧠🎶 Brainrot Shark ($BRNROT) 🎶🦈</h1>
+  <div class="overlay">
+    <h1>🧠🎶 Brainrot Shark ($BRNROT) 🎶🦈</h1>
+    <p>
+      Welcome to the official Brainrot Shark site!  
+      The most brain-rotting beats straight from the deep.  
+      Click the slipper to start the chaos and join the $BRNROT wave 🌊🚀
+    </p>
 
-  <button class="play-btn" onclick="toggleAudio()">
-    <img id="play-img" src="slipper.jpg" alt="Slipper Play Button">
-  </button>
+    <button class="play-btn" onclick="toggleAudio()">
+      <img id="play-img" src="slipper.jpg" alt="Slipper Play Button">
+    </button>
 
-  <audio id="bg-music" loop>
-  <source src="brainrot.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-
+    <audio id="bg-music" loop>
+      <source src="brainrot.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
 
   <script>
     const audio = document.getElementById('bg-music');
