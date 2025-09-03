@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brainrot Shark 🦈</title>
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      padding-top: 50px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .play-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      display: inline-block;
+    }
+
+    .play-btn img {
+      width: 200px;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .play-btn img:hover {
+      transform: scale(1.1) rotate(2deg);
+    }
+
+    .playing {
+      animation: bounce 0.5s infinite alternate;
+    }
+
+    @keyframes bounce {
+      0% { transform: scale(1) rotate(0deg); }
+      50% { transform: scale(1.1) rotate(-5deg); }
+      100% { transform: scale(1) rotate(5deg); }
+    }
+
+    #bg-music {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🧠🎶 Brainrot Shark ($BRNROT) 🎶🦈</h1>
+
+  <button class="play-btn" onclick="toggleAudio()">
+    <img id="play-img" src="slipper.jpg" alt="Slipper Play Button">
+  </button>
+
+  <audio id="bg-music" loop>
+    <source src="https://dl.dropboxusercontent.com/scl/fi/p9yxyah9em1jshw26ejkq/BRaiN-ROT-BRainN-ROT.mp4" type="audio/mp4">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    const audio = document.getElementById('bg-music');
+    const img = document.getElementById('play-img');
+
+    function toggleAudio() {
+      if (audio.paused) {
+        audio.play().then(() => {
+          img.classList.add('playing');
+        }).catch(err => console.log("Playback failed:", err));
+      } else {
+        audio.pause();
+        img.classList.remove('playing');
+      }
+    }
+  </script>
+
+</body>
+</html>
