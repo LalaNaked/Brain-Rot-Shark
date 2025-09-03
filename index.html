@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brainrot Shark 🦈</title>
+  <title>Brain Rot Shark 🦈</title>
+
+  <!-- Google Font for funky header -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
@@ -13,15 +17,20 @@
       text-align: center;
       background: url("brainrotshark.jpg") no-repeat center center fixed;
       background-size: cover;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     .overlay {
-      background: rgba(0, 0, 0, 0.6); /* keeps text readable */
-      min-height: 100vh;
+      background: rgba(0, 0, 0, 0.6);
+      flex: 1;
       padding-top: 60px;
+      padding-bottom: 80px; /* leave space for footer */
     }
 
     h1 {
+      font-family: 'Fredoka One', cursive;
       font-size: 3rem;
       margin-bottom: 20px;
       text-shadow: 2px 2px 8px #000;
@@ -66,12 +75,30 @@
     #bg-music {
       display: none;
     }
+
+    footer {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      font-size: 1rem;
+      line-height: 1.5;
+      text-shadow: 1px 1px 4px #000;
+    }
+
+    footer a {
+      color: #1DA1F2; /* X (Twitter) blue */
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
 
   <div class="overlay">
-    <h1>🧠🎶 Brainrot Shark ($BRNROT) 🎶🦈</h1>
+    <h1>Brain Rot Shark</h1>
     <p>
       Welcome to the official Brainrot Shark site!  
       The most brain-rotting beats straight from the deep.  
@@ -87,6 +114,14 @@
       Your browser does not support the audio element.
     </audio>
   </div>
+
+  <footer>
+    Brain Rot Shark ($BRNROT) is the meme coin born from the chaotic world of Italian Brainrot — 
+    where surreal hybrids rule the feed and reality takes a backseat.  
+    With two legs, sneakers, and zero brakes, $BRNROT is here to rot your brain while pumping your bags.  
+    Shoes on fins, gains on chain — the shark eats dips, not holders. <br><br>
+    👉 Follow us on <a href="https://x.com/LalaNaked" target="_blank">X</a>
+  </footer>
 
   <script>
     const audio = document.getElementById('bg-music');
@@ -106,4 +141,9 @@
 
 </body>
 </html>
+
+
+</body>
+</html>
+
 
